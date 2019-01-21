@@ -4,10 +4,10 @@ declare namespace BlessedContrib {
 
     export type Optionals<T, K extends keyof T> = {
         [P in keyof K]?: T[K]
-        }
+    }
     export type Picker<T, K extends keyof T> = {
         [P in K]: T[P];
-        };
+    };
 
 
     export module Widgets {
@@ -89,7 +89,7 @@ declare namespace BlessedContrib {
 
 
             // set<T extends (options?: WidgetOptions) => S, S extends WidgetElements>(row: number, col: number, rowSpan: number, colSpan: number, obj: T, opt: WidgetOptions): WidgetElements
-            set<T, S>(...args:any[]): any
+            set<T, S>(...args: any[]): any
 
             // set<K extends keyof Factories>(row: number, col: number, rowSpan: number, colSpan: number,
             //     obj: T, opts?: P<T> ): P<T>
@@ -198,7 +198,7 @@ declare namespace BlessedContrib {
         }
 
 
-        export interface CanvasOptions<D extends any=any>  extends BoxOptions {
+        export interface CanvasOptions<D extends any=any> extends BoxOptions {
             canvasSize?: {
                 width?: number,
                 height?: number
@@ -326,7 +326,7 @@ declare namespace BlessedContrib {
 
             log(str: string): boolean;
 
-            emit(str:any): boolean;
+            emit(str: any): boolean;
         }
 
 
@@ -384,7 +384,7 @@ declare namespace BlessedContrib {
             selectedBg?: string
             fg?: string
             bg?: string
-            interactive?: string
+            interactive?: boolean
         }
 
         export class TableElement extends CanvasElement<TableData> implements IHasOptions<TableOptions> {
@@ -421,42 +421,42 @@ declare namespace BlessedContrib {
 
     export module widget {
 
-        export class Grid extends Widgets.GridElement {}
+        export class Grid extends Widgets.GridElement { }
 
-        export class Bar extends Widgets.BarElement {}
+        export class Bar extends Widgets.BarElement { }
 
-        export class Line extends Widgets.LineElement {}
+        export class Line extends Widgets.LineElement { }
 
-        export class StackedBar extends Widgets.StackedBarElement {}
+        export class StackedBar extends Widgets.StackedBarElement { }
 
-        export class Canvas extends Widgets.CanvasElement {}
+        export class Canvas extends Widgets.CanvasElement { }
 
-        export class Tree extends Widgets.TreeElement {}
+        export class Tree extends Widgets.TreeElement { }
 
-        export class Table extends Widgets.TableElement {}
+        export class Table extends Widgets.TableElement { }
 
-        export class Picture extends Widgets.PictureElement {}
+        export class Picture extends Widgets.PictureElement { }
 
-        export class Markdown extends Widgets.MarkdownElement {}
+        export class Markdown extends Widgets.MarkdownElement { }
 
-        export class Map extends Widgets.MapElement {}
+        export class Map extends Widgets.MapElement { }
 
-        export class Log extends Widgets.LogElement {}
+        export class Log extends Widgets.LogElement { }
 
-        export class Lcd extends Widgets.LcdElement {}
+        export class Lcd extends Widgets.LcdElement { }
 
-        export class Gauge extends Widgets.GaugeElement {}
+        export class Gauge extends Widgets.GaugeElement { }
 
-        export class GaugeList extends Widgets.GaugeListElement {}
+        export class GaugeList extends Widgets.GaugeListElement { }
 
-        export class Donut extends Widgets.DonutElement {}
+        export class Donut extends Widgets.DonutElement { }
 
-        export class Sparkline extends Widgets.SparklineElement {}
+        export class Sparkline extends Widgets.SparklineElement { }
 
     }
 
 
-    export class grid extends Widgets.GridElement {}
+    export class grid extends Widgets.GridElement { }
 
     export function line(options?: Widgets.LineOptions): Widgets.LineElement
 
